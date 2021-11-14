@@ -10,7 +10,10 @@ namespace S6AlexChasi
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+
+            //pagina principal
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
