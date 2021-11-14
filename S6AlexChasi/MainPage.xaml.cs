@@ -25,6 +25,13 @@ namespace S6AlexChasi
 
         private async void btnGet_Clicked(object sender, EventArgs e)
         {
+
+            //toast mensaje de visualizar
+
+            var mensaje = "mensaje xamarin";
+            DependencyService.Get<MensajeA>().longAlert(mensaje);
+
+
             await Navigation.PushAsync(new viewInsertarA());
 
             //codigo clase s6 para cargar informacion con el boton
