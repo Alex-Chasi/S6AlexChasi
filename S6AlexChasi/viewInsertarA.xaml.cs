@@ -33,6 +33,9 @@ namespace S6AlexChasi
                 cliente.UploadValues("http://192.168.50.106:8084/moviles/post.php", "POST", parametros);
 
                 DisplayAlert("Mensaje", "Ingreso Correcto", "OK");
+                Limpiar();
+
+
             }
             catch (Exception ex)
             {
@@ -46,6 +49,15 @@ namespace S6AlexChasi
 
             Navigation.PushAsync(new MainPage());
 
+
+        }
+
+        public void Limpiar()
+        {
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtEdad.Text = "";
 
         }
     }
