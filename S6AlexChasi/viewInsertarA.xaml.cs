@@ -25,6 +25,9 @@ namespace S6AlexChasi
         private void btnRegresar_Clicked(object sender, EventArgs e)
         {
 
+            Navigation.PushAsync(new MainPage());
+
+
         }
     }
 }
