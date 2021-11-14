@@ -6,10 +6,7 @@
     <StackLayout>
         <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center"></Label>
         <Label x:Name="texto" Text=""></Label>
-        <Button Text="Consultar"
-                x:Name="btnGet"
-                Clicked="btnGet_Clicked">            
-        </Button>
+        
         <ListView x:Name="MyListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -23,6 +20,20 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>        
+        </ListView>
+        <Button Text="Insertar"
+                x:Name="btnGet"
+                Clicked="btnGet_Clicked">
+        </Button>
+        <Button Text="Actualizar"
+                x:Name="btnPost"
+                Clicked="btnPost_Clicked">
+        </Button>
+        <Button Text="Delete"
+                x:Name="btnDelete"
+                Clicked="btnDelete_Clicked">
+        </Button>
+        
+
     </StackLayout>
 </ContentPage>

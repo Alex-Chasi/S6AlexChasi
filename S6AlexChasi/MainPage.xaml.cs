@@ -19,6 +19,8 @@ namespace S6AlexChasi
         public MainPage()
         {
             InitializeComponent();
+            get();
+
         }
 
         private async void btnGet_Clicked(object sender, EventArgs e)
@@ -28,6 +30,36 @@ namespace S6AlexChasi
             _post = new ObservableCollection<S6AlexChasi.Ws.Datos>(posts);
 
             MyListView.ItemsSource = _post;
+
+        }
+
+
+        public async void get() {
+            try
+            {
+                var content = await client.GetStringAsync(Url);
+                List<S6AlexChasi.Ws.Datos> posts = JsonConvert.DeserializeObject<List<S6AlexChasi.Ws.Datos>>(content);
+                _post = new ObservableCollection<S6AlexChasi.Ws.Datos>(posts);
+
+                MyListView.ItemsSource = _post;
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error","ERROR"+ex.Message,"Ok");
+            }
+        
+        
+        }
+
+
+        private void btnPost_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Clicked(object sender, EventArgs e)
+        {
 
         }
     }
