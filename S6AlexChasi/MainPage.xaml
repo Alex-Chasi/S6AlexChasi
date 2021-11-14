@@ -29,7 +29,7 @@
                 x:Name="btnPost"
                 Clicked="btnPost_Clicked">
         </Button>
-        <Button Text="Delete"
+        <Button Text="Eliminar"
                 x:Name="btnDelete"
                 Clicked="btnDelete_Clicked">
         </Button>

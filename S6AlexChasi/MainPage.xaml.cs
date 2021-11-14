@@ -25,11 +25,15 @@ namespace S6AlexChasi
 
         private async void btnGet_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new viewInsertarA());
+
+            //codigo clase s6 para cargar informacion con el boton
+            /*
             var content = await client.GetStringAsync(Url);
             List<S6AlexChasi.Ws.Datos> posts = JsonConvert.DeserializeObject<List<S6AlexChasi.Ws.Datos>>(content);
             _post = new ObservableCollection<S6AlexChasi.Ws.Datos>(posts);
 
-            MyListView.ItemsSource = _post;
+            MyListView.ItemsSource = _post;*/
 
         }
 
