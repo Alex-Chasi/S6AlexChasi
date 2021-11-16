@@ -21,7 +21,6 @@ namespace S6AlexChasi
         {
             InitializeComponent();
             get();
-
         }
 
         private async void btnGet_Clicked(object sender, EventArgs e)
