@@ -12,6 +12,19 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+
+                        <ViewCell.ContextActions>
+                            <MenuItem
+                                x:Name="BtnEliminar"
+                                Text="Eliminar"
+                                IsDestructive="True"
+                                Clicked="btnDelete_Clicked"
+                                CommandParameter="{Binding .}">
+                                
+                            </MenuItem>
+                        </ViewCell.ContextActions>
+                        
+                        
                         <StackLayout>
                             <Label x:Name="lblname" Text="{Binding nombre}">                                
                             </Label>

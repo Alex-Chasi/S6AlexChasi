@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,12 +67,25 @@ namespace S6AlexChasi
 
         private void btnPost_Clicked(object sender, EventArgs e)
         {
+            //aqui clase Datos lo puse publico para el actualizar el dato 
+            /*
+            Ws.Datos da = new Ws.Datos
+            {
+            };*/
 
         }
 
-        private void btnDelete_Clicked(object sender, EventArgs e)
+        private async void btnDelete_Clicked(object sender, EventArgs e)
         {
 
+            if (await DisplayAlert("Confirmacion", "esta seguro de eliminar el registro", "Si", "No")) ;
+            {                 
+                    
+            }
+
         }
+      
+
+
     }
 }
