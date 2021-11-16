@@ -64,20 +64,24 @@ namespace S6AlexChasi
         }
 
 
-        private void btnPost_Clicked(object sender, EventArgs e)
+        private async void btnPost_Clicked(object sender, EventArgs e)
         {
             //aqui clase Datos lo puse publico para el actualizar el dato 
             /*
             Ws.Datos da = new Ws.Datos
             {
             };*/
+            if (await DisplayAlert("Modificar", "esta seguro de modificar el registro", "Si", "No")) ;
+            {
+
+            }
 
         }
 
         private async void btnDelete_Clicked(object sender, EventArgs e)
         {
 
-            if (await DisplayAlert("Confirmacion", "esta seguro de eliminar el registro", "Si", "No")) ;
+            if (await DisplayAlert("Confirmación", "esta seguro de eliminar el registro", "Si", "No")) ;
             {                 
                     
             }
