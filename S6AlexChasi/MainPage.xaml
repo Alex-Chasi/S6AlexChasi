@@ -38,10 +38,11 @@
                 x:Name="btnGet"
                 Clicked="btnGet_Clicked">
         </Button>
-        <Button Text="Insert"
+        <Button Text="Insertar"
                 x:Name="btnInsert"
                 Clicked="btnInsert_Clicked">
         </Button>
+
         <!--<Button Text="Actualizar"
                 x:Name="btnPost"
                 Clicked="btnPost_Clicked">
