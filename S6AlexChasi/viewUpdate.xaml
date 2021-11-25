@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S6AlexChasi.viewUpdate">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+            <Label Text="Ventana Modificar"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtCodigoView" Placeholder="Codigo" Keyboard="Numeric"></Entry>
+            <Entry x:Name="txtNombreView" Placeholder="Nombre"></Entry>
+            <Entry x:Name="txtApellidoView" Placeholder="Apellido"></Entry>
+            <Entry x:Name="txtEdadView" Placeholder="Edad" Keyboard="Numeric"></Entry>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

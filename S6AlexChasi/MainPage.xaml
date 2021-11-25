@@ -8,12 +8,12 @@
         <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center"></Label>
         <Label x:Name="texto" Text=""></Label>
         
-        <ListView x:Name="MyListView">
+        <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
 
-                        <ViewCell.ContextActions>
+                        <!--<ViewCell.ContextActions>
                             <MenuItem
                                 x:Name="BtnEliminar"
                                 Text="Eliminar"
@@ -22,8 +22,7 @@
                                 CommandParameter="{Binding .}">
                                 
                             </MenuItem>
-                        </ViewCell.ContextActions>
-                        
+                        </ViewCell.ContextActions>-->                        
                         
                         <StackLayout>
                             <Label x:Name="lblname" Text="{Binding nombre}">                                
@@ -35,18 +34,22 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Text="Insertar"
+        <Button Text="Consultar"
                 x:Name="btnGet"
                 Clicked="btnGet_Clicked">
         </Button>
-        <Button Text="Actualizar"
+        <Button Text="Insert"
+                x:Name="btnInsert"
+                Clicked="btnInsert_Clicked">
+        </Button>
+        <!--<Button Text="Actualizar"
                 x:Name="btnPost"
                 Clicked="btnPost_Clicked">
         </Button>
         <Button Text="Eliminar"
                 x:Name="btnDelete"
                 Clicked="btnDelete_Clicked">
-        </Button>
+        </Button>-->
         
 
     </StackLayout>

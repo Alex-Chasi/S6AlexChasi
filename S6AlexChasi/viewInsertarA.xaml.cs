@@ -34,8 +34,7 @@ namespace S6AlexChasi
 
                 DisplayAlert("Mensaje", "Ingreso Correcto", "OK");
                 Limpiar();
-
-
+                Navigation.PushAsync(new MainPage());
             }
             catch (Exception ex)
             {
@@ -46,10 +45,7 @@ namespace S6AlexChasi
 
         private void btnRegresar_Clicked(object sender, EventArgs e)
         {
-
             Navigation.PushAsync(new MainPage());
-
-
         }
 
         public void Limpiar()
